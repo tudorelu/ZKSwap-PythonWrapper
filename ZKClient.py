@@ -12,11 +12,13 @@ class ZKClient:
         self.base = _base + str(network)
         self.address = address
 
-    def request_get(self, params):
-        return requests.get(self.base + params).status_code
+    def request_get(self, endpoint, params={}):
+        print(self.base + endpoint)
+        return requests.get(self.base + endpoint, params).text
 
-    def request_post(self, params):
-        return requests.post(self.base + params).status_code
+    def request_post(self, endpoint, data=[]):
+        print(self.base + endpoint)
+        return requests.post(self.base + endpoint, data).text
 
     def get_contact_address(self):
         return self.request_get('/contract-address')
