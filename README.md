@@ -1,6 +1,6 @@
 # ZKSwap-PythonWrapper
 
-Python wrapper around the zkswap REST API
+Python wrapper around the [zkswap REST API](https://en.wiki.zks.org/interact-with-zkswap/restful-api)
 
 ```py
 
