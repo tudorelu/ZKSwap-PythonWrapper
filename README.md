@@ -138,4 +138,67 @@ Python wrapper around the [zkswap REST API](https://en.wiki.zks.org/interact-wit
           }
       '''
 
+    def get_complete_info_pair(self, symbol_a, symbol_b):
+      ''' Gets comprehensive info on a single zkswap pair.
+      
+          `symbol_a` - string | one of the symbols of the pair
+          `symbol_b` - string | the other symbol of the pair
+
+          Calls the get_pairs_comprehensive_info(). 
+          Raises error if `symbol_a` and `symbol_b` not found in the same pair
+
+          Returns - a dict containing info about the pair
+          {
+              'address': '0xf005ab93a5ede376de898f0980cc63b460273e3d',
+              'amount_a': '5933722.80177120620850816',
+              'amount_b': '14764422.084323',
+              'anchored': 29,
+              'decimals': 18,
+              'id': 128,
+              'id_a': 1,
+              'id_b': 29,
+              'price': '14098427.316840369567373',
+              'symbol': 'liquidity_1_29',
+              'symbol_a': 'ZKS',
+              'symbol_b': 'USDT',
+              'total_supply': '2.094477880761510055'
+          }
+      '''
+
+
+    def get_reserves(self, pair_id):
+      ''' Gets the current reserves on a pair based on the {pair_id} '''
+        
+
+    def _get_amount_out(self, amount_in, reserve_in, reserve_out):
+      ''' Given an input amount of an asset and pair reserves, 
+      returns the maximum output amount of the other asset.
+      
+      Based on the Uniswap V2 formula:
+      https://github.com/Uniswap/uniswap-v2-periphery/blob/dda62473e2da448bc9cb8f4514dadda4aeede5f4/contracts/libraries/UniswapV2Library.sol#L43
+      '''
+
+
+    def _get_amount_in(self, amount_out, reserve_in, reserve_out):
+      ''' Given an output amount of an asset and pair reserves, 
+      returns a required input amount of the other asset.
+      
+      Based on the Uniswap V2 formula:
+      https://github.com/Uniswap/uniswap-v2-periphery/blob/dda62473e2da448bc9cb8f4514dadda4aeede5f4/contracts/libraries/UniswapV2Library.sol#L53
+      '''
+
+
+    def get_amount_in(self, amount_out, symbol_in, symbol_out):
+      ''' Returns the amount of `symbol_in` required in order for the
+      LP to return `amount_out` of `symbol_out`. Raises exceeption in 
+      case the pool doesn't exist.
+      '''
+
+
+    def get_amount_out(self, amount_in, symbol_in, symbol_out):
+      ''' Returns the amount of `symbol_out` one would receive for
+      `amount_in` of `symbol_in` sent to the LP. Raises exceeption 
+      in case the pool doesn't exist.
+      '''
+
 ```
