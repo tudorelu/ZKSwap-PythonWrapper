@@ -1,62 +1,62 @@
 # ZKSwap-PythonWrapper
 
-Python wrapper around the zkswap REST API
+Python wrapper around the [zkswap REST API](https://en.wiki.zks.org/interact-with-zkswap/restful-api)
 
 ```py
 
-    def request_get(self, endpoint, params={})
+    def request_get(self, endpoint, params={}):
       ''' GET function '''
 
 
-    def request_post(self, endpoint, data=[])
+    def request_post(self, endpoint, data=[]):
       ''' POST function '''
 
 
-    def get_contact_address(self)
+    def get_contact_address(self):
       ''' Wrapper for the /contract-address endpoint '''
 
 
-    def get_token_list(self)
+    def get_token_list(self):
       ''' Wrapper for the /tokens endpoint '''
 
 
-    def get_token_prices(self)
+    def get_token_prices(self):
       ''' Wrapper for the /tokens/price endpoint '''
 
 
-    def get_pairs_list(self)
+    def get_pairs_list(self):
       ''' Wrapper for the /pairs endpoint '''
 
 
-    def get_pairs_prices(self)
+    def get_pairs_prices(self):
       ''' Wrapper for the /pairs/prices endpoint '''
 
 
-    def get_account_balance(self)
+    def get_account_balance(self):
       ''' Wrapper for the /account/{address}/balances endpoint'''
 
 
-    def get_account_info(self)
+    def get_account_info(self):
       ''' Wrapper for the /account/{address}/info endpoint '''
 
 
-    def get_account_fee(self)
+    def get_account_fee(self):
       ''' Wrapper for the /account/{address}/fee endpoint '''
 
 
-    def get_transaction_list(self)
+    def get_transaction_list(self):
       ''' Wrapper for the /txs endpoint '''
 
 
-    def get_transaction(self, tx_hash)
+    def get_transaction(self, tx_hash):
       ''' Wrapper for the /tx/{tx_hash} endpoint '''
 
 
-    def post_submit_transaction(self)
+    def post_submit_transaction(self):
       ''' Wrapper for the /account/{tx} endpoint '''
 
 
-    def populate_tokens_by_id(self)
+    def populate_tokens_by_id(self):
       ''' 
       Populates a dict with all tokens avaiable on zkswap.
 
@@ -75,7 +75,7 @@ Python wrapper around the zkswap REST API
       '''
 
 
-    def populate_pairs_by_id(self)
+    def populate_pairs_by_id(self):
       ''' 
       Populates a dict with all pairs avaiable on zkswap.
 
@@ -99,7 +99,7 @@ Python wrapper around the zkswap REST API
       '''
 
 
-    def get_complete_info_all_pairs(self, update_info=False)
+    def get_complete_info_all_pairs(self, update_info=False):
       ''' 
       Calls multiple endpoints to gather comprehensive details
       on all the zkswap pairs. 
@@ -111,7 +111,7 @@ Python wrapper around the zkswap REST API
       '''
 
 
-    def get_complete_info_pair(self, pair_id)
+    def get_complete_info_pair(self, pair_id):
       ''' 
       Gets comprehensive info on a single zkswap pair.
           
