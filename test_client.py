@@ -22,3 +22,8 @@ print('get_account_fee'); print(client.get_account_fee())
 print('get_transaction_list'); print(client.get_transaction_list())
 print('get_transaction'); print(client.get_transaction(tx_hash = '000x0'))
 print('post_submit_transaction'); print(client.post_submit_transaction())
+
+print("client.get_amount_out(1000, 'ZKS', 'ETH')")
+print(client.get_amount_out(1000, 'ZKS', 'ETH'))
+print("client.get_amount_out(1000, 'ETH', 'ZKS')")
+print(client.get_amount_out(1000, 'ETH', 'ZKS'))
