@@ -1,5 +1,19 @@
 # Finds & prints all triplets of pairs 
 # through which triangular arbitrage can be done 
+# 
+# IE Prints:
+#
+# Found Triangular Arbitrage Pairs:
+#
+# ids:  158 179 206
+# ETH / ZKS
+# ETH / HT
+# HT / ZKS
+#
+# ids:  158 181 208
+# ETH / ZKS
+# ETH / REN
+# REN / ZKS
 
 from ZKSwapClient import ZKSwapClient
 
