@@ -1,10 +1,8 @@
 # Finds & prints all triplets of pairs 
 # through which triangular arbitrage can be done 
-# 
-# IE Prints:
-#
-# Found Triangular Arbitrage Pairs:
-#
+
+# EXAMPLE:
+
 # ids:  158 179 206
 # ETH / ZKS
 # ETH / HT
